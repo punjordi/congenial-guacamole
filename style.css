@@ -37,3 +37,21 @@ li span{
     float: right;
     margin-right: 10px;
 }
+
+
+.addSummoner{
+    position: relative;
+    padding-bottom: 0;
+    height: 30px;
+
+}
+
+.addText{
+    width: 80%;
+    height: 30px;
+}
+
+.addSummoner button{
+    height: 35px;
+    width: 80px;
+}

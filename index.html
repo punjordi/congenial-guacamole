@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src = "summoner.js"></script>
 <head>
     <meta charset="UTF-8">
     <title>LeagueOfCancer</title>
     <link rel="stylesheet" href = "style.css">
 </head>
 <body>
-    <div class="main">
+    <div class="main" ng-app="appModule" ng-controller="appController">
         <h1>Is that Him?</h1>
         <div class ="addSummoner">
 
@@ -16,12 +17,12 @@
 
         </div>
         <ul>
-            <li>R1</li>
-            <li>R2</li>
-            <li>R3</li>
-            <li>R4</li>
-            <li>R5</li>
-            <span>x</span>
+            <li ng-repeat="x in recentNames">
+                {{x}}
+                <span>x</span>
+            </li>
+
+
         </ul>
 
     </div>
