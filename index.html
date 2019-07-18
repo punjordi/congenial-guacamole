@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
 <script src = "summoner.js"></script>
 <head>
     <meta charset="UTF-8">
@@ -8,18 +8,18 @@
     <link rel="stylesheet" href = "style.css">
 </head>
 <body>
-    <div class="main" ng-app="appModule" ng-controller="appController">
+    <div class="main" ng-app="appModule" ng-controller="appController"  >
         <h1>Is that Him?</h1>
-        <div class ="addSummoner">
+        <form class ="addSummoner" ng-submit="pushName()" >
 
-            <input placeholder="Enter Summoner Name.." class="addText" >
-            <button>Search!</button>
+            <input  ng-model = "newName" placeholder="Enter Summoner Name.." class="addText"  >
+            <button ng-click="pushName()">Search!</button>
 
-        </div>
+        </form>
         <ul>
             <li ng-repeat="x in recentNames">
                 {{x}}
-                <span>x</span>
+                <span ng-click="deleteName($index)">x</span>
             </li>
 
 
