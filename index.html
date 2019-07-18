@@ -8,7 +8,7 @@
     <link rel="stylesheet" href = "style.css">
 </head>
 <body>
-    <div class="main" ng-app="appModule" ng-controller="appController"  >
+    <div class="main" ng-app="appModule" ng-controller="appController">
         <h1>Is that Him?</h1>
         <form class ="addSummoner" ng-submit="pushName()" >
 
@@ -17,8 +17,9 @@
 
         </form>
         <ul>
-            <li ng-repeat="x in recentNames">
-                {{x}}
+            <li ng-repeat="name in recentNames">
+
+                {{name}}
                 <span ng-click="deleteName($index)">x</span>
             </li>
 
